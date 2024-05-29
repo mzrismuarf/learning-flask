@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Import macro</title>
+</head>
+<body>
+    <a href="{{ url_for('index')}}">Home</a>
+
+    <h1>Import macro</h1>
+    {% import 'macro.html' as form %}
+    <p>
+        {{ form.input('username') }}
+    </p>
+    <p>{{form.input('password')}}</p>
+    <p>
+        {{form.input('submit', type='submit', value='Login')}}
+    </p>
+
+    <h1>{{ request.args.get('device')}}</h1>
+</body>
+</html>

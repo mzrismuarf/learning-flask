@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Age: {{ user.age}}</h1>
+    {% if user.age is gt 18 %}
+        <h1>You are an adult</h1>
+    {% elif user.age is gt 15 %}
+        <h1>You are a teenager</h1>    
+    {% else %}
+        <h1>You are not an adult</h1>
+    {% endif %} 
+</body>
+</html>

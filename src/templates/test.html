@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home Page</title>
+</head>
+<body>
+  <h1>Welcome to Test!, {{user.name}}</h1>
+  <p>My Age: {{user.age}}</p>
+  {% if user.age|float is gt 25 %}
+    <p>{{user.name}} are old</p>
+  {% else %}
+    <p>{{user.name}} are young</p>
+  {% endif %}
+</body>
+</html>
